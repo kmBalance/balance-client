@@ -1,23 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { MatDividerModule } from '@angular/material/divider';
-import { BudgetContainerComponent } from './containers/budget-container/budget-container.component';
-import { BudgetDashboardComponent } from './components/budget-dashboard/budget-dashboard.component';
-import { BudgetRoutes } from './budget.routing';
 
+import { BudgetRoutingModule } from './budget-routing.module';
+import { BudgetContainerComponent } from './containers/budget-container/budget-container.component';
+import { BudgetChartComponent } from './components/budget-chart/budget-chart.component';
+import { BudgetIncomeComponent } from './components/budget-income/budget-income.component';
+import { BudgetExpensesComponent } from './components/budget-expenses/budget-expenses.component';
+import { BudgetAggregateContainerComponent } from './containers/budget-aggregate-container/budget-aggregate-container.component';
+import { BudgetDashboardComponent } from './containers/budget-dashboard/budget-dashboard.component';
 
 
 @NgModule({
   declarations: [
     BudgetContainerComponent,
+    BudgetChartComponent,
+    BudgetIncomeComponent,
+    BudgetExpensesComponent,
+    BudgetAggregateContainerComponent,
     BudgetDashboardComponent
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    MatDividerModule,
-    BudgetRoutes
+    BudgetRoutingModule
   ]
 })
 export class BudgetModule { }

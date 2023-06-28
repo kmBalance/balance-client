@@ -20,6 +20,9 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "paths": {
+      "balance-lib": [
+        "dist/balance-lib"
+      ],
       "test-lib": [
         "dist/test-lib"
       ]

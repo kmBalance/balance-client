@@ -2,18 +2,14 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BudgetContainerComponent } from './budget-container.component';
 
-describe('UserContainerComponent', () => {
+describe('BudgetContainerComponent', () => {
   let component: BudgetContainerComponent;
   let fixture: ComponentFixture<BudgetContainerComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ BudgetContainerComponent ]
-    })
-    .compileComponents();
-  });
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [BudgetContainerComponent]
+    });
     fixture = TestBed.createComponent(BudgetContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
