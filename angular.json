@@ -25,7 +25,7 @@
               "projects/login-app/src/assets"
             ],
             "styles": [
-              "./styles.css"
+              "./styles-balance-theme.scss"
             ],
             "scripts": []
           },
@@ -87,7 +87,7 @@
               "projects/login-app/src/assets"
             ],
             "styles": [
-              "./styles.css"
+              "./styles-balance-theme.scss"
             ],
             "scripts": []
           }
@@ -121,8 +121,7 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "./styles.css"
+              "./styles-balance-theme.scss"
             ],
             "scripts": []
           },
@@ -184,8 +183,7 @@
               "projects/budget-app/src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "./styles.css"
+              "./styles-balance-theme.scss"
             ],
             "scripts": []
           }
