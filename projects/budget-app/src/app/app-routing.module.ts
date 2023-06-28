@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
- import { PatientRoutes } from './modules/patient/patient.routing';
+//  import { PatientRoutes } from './modules/patient/patient.routing';
 import { MainLayoutComponent } from './modules/core/components/main-layout/main-layout.component';
 import { NotFoundComponent } from './modules/core/components/not-found/not-found.component';
 import { NavigationComponent } from './modules/core/components/navigation/navigation.component.spec';
@@ -15,11 +15,11 @@ import { NavigationComponent } from './modules/core/components/navigation/naviga
     path: '',
     component: MainLayoutComponent,
     children: [
-      {
-        path: 'patient',
-        loadChildren: () =>
-          import('./modules/patient/patient.module').then((m) => m.PatientModule),
-      },
+      // {
+      //   path: 'patient',
+      //   loadChildren: () =>
+      //     import('./modules/patient/patient.module').then((m) => m.PatientModule),
+      // },
       {
         path: 'budget',
         loadChildren: () =>

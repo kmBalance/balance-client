@@ -6,7 +6,7 @@ import { rootStore } from './app.state';
 import { LottieCacheModule, LottieModule } from 'ngx-lottie';
 import { CoreModule } from './modules/core/core.module';
 import { EffectsModule } from '@ngrx/effects';
-import { PatientEffects } from './modules/patient/state/patient.effects';
+// import { PatientEffects } from './modules/patient/state/patient.effects';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -33,7 +33,7 @@ export function playerFactory() {
     // StoreDevtoolsModule.instrument(),
      LottieModule.forRoot({ player: playerFactory }),
      LottieCacheModule.forRoot(),
-     EffectsModule.forRoot([PatientEffects])
+    //  EffectsModule.forRoot([PatientEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

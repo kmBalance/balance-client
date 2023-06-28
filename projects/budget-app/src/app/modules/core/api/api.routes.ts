@@ -1,5 +1,5 @@
 import { SortDirection } from "@angular/material/sort";
-import { IPatient } from "../../patient/models/patient.model";
+// import { IPatient } from "../../patient/models/patient.model";
 import { environment } from "projects/budget-app/src/environments/environment.development";
 
 /**
@@ -20,7 +20,7 @@ export type Paged<T> = {
 /**
  * Domain Filters
  */
-export type PatientFilter = ApiFilter<IPatient> & Paging
+// export type PatientFilter = ApiFilter<IPatient> & Paging
 
 
 const patientEndpoint = `${environment.budget_api}/patient`
