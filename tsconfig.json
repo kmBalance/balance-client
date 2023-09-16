@@ -25,6 +25,12 @@
       ],
       "test-lib": [
         "dist/test-lib"
+      ],
+      "types": [
+        "dist/types"
+      ],
+      "types-lib": [
+        "dist/types-lib"
       ]
     },
     "lib": [
