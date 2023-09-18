@@ -8,7 +8,7 @@ import {
 // import { SnackBarService } from './../../core/services/snackbar.service';
 // import { PatientService } from './..//services/patient.service';
 import { actions } from './auth.actions';
-import { SnackBarService } from '../../../core/service/snackbar.service';
+import { SnackBarService } from '../../../core/services/snackbar/snackbar.service';
 import { AuthService } from '../../service/auth.service';
 @Injectable()
 export class AuthEffects {

@@ -14,10 +14,13 @@ import { IonicModule } from '@ionic/angular';
 import { Router, RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { AuthEffects } from './modules/auth/state/auth/auth.effects';
-import { SnackBarService } from './modules/core/service/snackbar.service';
+import { SnackBarService } from './modules/core/services/snackbar/snackbar.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SplitViewModule } from './modules/core/layouts/split-view/split-view.module';
 import { CoreModule } from './modules/core/core.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MAT_CARD_CONFIG } from '@angular/material/card';
 
 // Note we need a separate function as it's required
 // by the AOT compiler.
@@ -41,9 +44,13 @@ export function playerFactory() {
     CoreModule,
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([AuthEffects]),
+    
     IonicModule.forRoot()
   ],
-  providers: [SnackBarService],
+  providers: [SnackBarService,
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill', floatlabel: 'always'}},
+    {provide: MAT_CARD_CONFIG, useValue: {appearance: 'raised'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

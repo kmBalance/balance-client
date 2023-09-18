@@ -9,7 +9,7 @@ import { actions } from './modules/auth/state/auth/auth.actions';
 })
 export class AppComponent {
   title = 'budget-app';
-
+  isDark: boolean = false;
   constructor(private store: Store<AuthState>) {
 
   }

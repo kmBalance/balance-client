@@ -35,7 +35,6 @@
               }
             ],
             "styles": [
-              "./styles.scss",
               {
                 "input": "node_modules/@ionic/angular/css/core.css"
               },
@@ -65,6 +64,9 @@
               },
               {
                 "input": "node_modules/@ionic/angular/css/flex-utils.css"
+              },
+              {
+                "input": "assets/theme/theme.scss"
               }
             ],
             "scripts": []

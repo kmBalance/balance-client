@@ -11,8 +11,15 @@ import { filter, map } from 'rxjs/operators';
 })
 export class BaseContainerComponent {
   
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
-  title$ = this.activatedRoute.firstChild?.title
+  title$ = this.activatedRoute.parent?.title
+  ngOnInit() {
+    this.title$?.subscribe(data => {
+      console.log(this.router)
+      console.log(this.activatedRoute.parent)
+    })
+    this.activatedRoute.children[0].title.subscribe(data => console.log(data))
+  }
 
 }

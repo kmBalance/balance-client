@@ -16,22 +16,11 @@ const root: Route = {
       path: 'dashboard',
       // title: 'Budget Dashboard',
       component: DashboardComponent
-      // children: [
-      //   {
-      //     path: '',
-      //     redirectTo: 'dashboard',
-      //     pathMatch: 'prefix',
-      //   },
-      //   {
-      //     path: 'dashboard',
-      //     component: PatientDashboardComponent,
-      //   },
-      //   // {
-      //   //   path: 'account-settings',
-      //   //   component: AccountSettingsComponent,
-      //   // },
-      // ],
     },
+    {
+      path: 'files',
+      loadChildren: () => import('./files/files.module').then(m => m.FilesModule)
+    }
   ],
 };
 

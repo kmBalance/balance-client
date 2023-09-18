@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ToolbarLayoutComponent } from './modules/core/layouts/toolbar-layout/toolbar-layout/toolbar-layout.component';
 import { NavigationResolver } from './modules/core/resolvers/navigation.resolver';
 import { SplitViewComponent } from './modules/core/layouts/split-view/split-view/split-view.component';
-import { ActionComponent } from './modules/core/layouts/action/action.component';
+import { ActionComponent } from './modules/core/action/action.component';
 import { ActionResolver } from './modules/core/resolvers/action.resolver';
-import { NavigationComponent } from './modules/core/layouts/navigation/navigation.component';
+import { NavigationComponent } from './modules/core/navigation/navigation.component';
 // import { NotFoundComponent } from './modules/core/components/not-found/not-found.component';
 // import { NavigationComponent } from './modules/core/components/navigation/navigation.component.spec';
 
@@ -20,7 +20,7 @@ const outlets = [{
   path: '',
   outlet: 'navigation',
   component: NavigationComponent,
-  resolve: { actions: () => inject(ActionResolver).resolve()}
+  resolve: { routes: () => inject(NavigationResolver).resolve()}
 }]
 
 const routes: Routes = [

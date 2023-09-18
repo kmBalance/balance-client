@@ -12,8 +12,9 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     IonicModule,
-    RouterModule
+
   ]
 })
 export class SplitViewModule { }

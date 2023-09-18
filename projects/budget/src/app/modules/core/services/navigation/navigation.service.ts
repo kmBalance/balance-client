@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { IIdentity } from '../../auth/types/identity';
+import { IIdentity } from '../../../auth/types/identity';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { NavigationArray } from '../types/navigation/navigation';
+import { NavigationArray } from '../../types/navigation/navigation';
 
 @Injectable({
   providedIn: 'root'

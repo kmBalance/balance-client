@@ -1,6 +1,6 @@
 import { Injectable, inject } from "@angular/core";
 import { ActivatedRouteSnapshot, Resolve, ResolveFn, RouterStateSnapshot } from "@angular/router";
-import { NavigationService } from "../service/navigation.service";
+import { NavigationService } from "../services/navigation/navigation.service";
 import { Observable } from "rxjs";
 import { Store } from "@ngrx/store";
 import { AuthState, authFeature } from "../../auth/state/auth/auth.reducer";

@@ -13,6 +13,8 @@ import { BudgetEffects } from './state/budget.effects';
 import { UserBudgetFacade } from './state/userBudget.facade';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { TimelineComponent } from './components/timeline/timeline.component';
     BudgetRoutingModule,
     EffectsModule.forFeature([BudgetEffects]),
     StoreModule.forFeature(budgetFeature),
-    NgxChartsModule
+    NgxChartsModule,
+    MatGridListModule,
+    IonicModule,
   ],
   providers: [UserBudgetFacade]
 })

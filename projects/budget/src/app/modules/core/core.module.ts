@@ -12,8 +12,15 @@ import { AppRoutingModule } from '../../app-routing.module';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ActionResolver } from './resolvers/action.resolver';
 import { NavigationResolver } from './resolvers/navigation.resolver';
-import { ActionComponent } from './layouts/action/action.component';
-import { NavigationComponent } from './layouts/navigation/navigation.component';
+import { ActionComponent } from './action/action.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ThemeService } from './services/theme/theme.service';
+import { StyleManagerService } from './services/theme/style-manager.service';
+import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
+import { ThemeToggleComponent } from './action/theme-toggle/theme-toggle.component';
+import { SanitizePipe } from './pipes/sanitize/sanitize.pipe';
 
 
 
@@ -21,19 +28,28 @@ import { NavigationComponent } from './layouts/navigation/navigation.component';
   declarations: [
     BaseContainerComponent,
     ActionComponent,
-    NavigationComponent
+    NavigationComponent,
+    ThemeToggleComponent,
+    SanitizePipe
   ],
   exports: [
     MatSnackBarModule,
-    
+    SanitizePipe
+
   ],
   imports: [
     CommonModule,
     RouterModule,
-    MatSnackBarModule
+    IonicModule,
+    MatSnackBarModule,
+    FormsModule
+
   ],
-  providers:[ ActionResolver,
-    NavigationResolver]
+  providers: [
+    ActionResolver,
+    NavigationResolver,
+    ThemeService,
+    StyleManagerService]
 
 })
 export class CoreModule { }
