@@ -7,8 +7,25 @@ import { SplitViewComponent } from './modules/core/layouts/split-view/split-view
 import { ActionComponent } from './modules/core/action/action.component';
 import { ActionResolver } from './modules/core/resolvers/action.resolver';
 import { NavigationComponent } from './modules/core/navigation/navigation.component';
+import { MobileViewComponent } from './modules/core/layouts/mobile-view/mobile-view.component';
 // import { NotFoundComponent } from './modules/core/components/not-found/not-found.component';
 // import { NavigationComponent } from './modules/core/components/navigation/navigation.component.spec';
+const mobile = () => {
+  const toMatch = [
+      /Android/i,
+      /webOS/i,
+      /iPhone/i,
+      /iPad/i,
+      /iPod/i,
+      /BlackBerry/i,
+      /Windows Phone/i
+  ];
+  console.log(navigator.userAgent)
+
+  return toMatch.some((toMatchItem) => {
+      return navigator.userAgent.match(toMatchItem);
+  });
+}
 
 const outlets = [{
   path: '',
@@ -31,7 +48,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: SplitViewComponent,
+    component: mobile() ? MobileViewComponent: SplitViewComponent,
     children: [
       ...outlets,
       {

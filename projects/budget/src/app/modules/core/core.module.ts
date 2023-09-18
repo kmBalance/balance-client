@@ -21,6 +21,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { ThemeToggleComponent } from './action/theme-toggle/theme-toggle.component';
 import { SanitizePipe } from './pipes/sanitize/sanitize.pipe';
+import { MobileViewComponent } from './layouts/mobile-view/mobile-view.component';
 
 
 
@@ -30,7 +31,8 @@ import { SanitizePipe } from './pipes/sanitize/sanitize.pipe';
     ActionComponent,
     NavigationComponent,
     ThemeToggleComponent,
-    SanitizePipe
+    SanitizePipe,
+    MobileViewComponent
   ],
   exports: [
     MatSnackBarModule,

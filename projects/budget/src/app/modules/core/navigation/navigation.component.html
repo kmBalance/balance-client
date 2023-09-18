@@ -1,2 +1,8 @@
-<li *ngFor="let route of routes; let i = index"></li>
-{{routes.length}}
+
+
+  <ion-list class="nav-list">
+    <ion-item *ngFor="let route of routes; let i = index" [routerLink]="route.route">
+      <ion-button class="nav-btn" fill="clear" shape="round">
+        <ion-icon slot="start" [name]="route.icon"> </ion-icon>{{ route.title }}</ion-button>
+    </ion-item>
+    </ion-list>
