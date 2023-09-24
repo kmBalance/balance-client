@@ -23,6 +23,9 @@
       "balance-lib": [
         "dist/balance-lib"
       ],
+      "strongly-typed-endpoints": [
+        "dist/strongly-typed-endpoints"
+      ],
       "test-lib": [
         "dist/test-lib"
       ],
