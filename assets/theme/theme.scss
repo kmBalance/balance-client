@@ -1,5 +1,6 @@
 @use "@angular/material" as mat;
 @use 'sass:map';
 @import "ionic";
-@import "ionic.variables";
+@import "ionic.variables.dark";
+@import "ionic.variables.light";
 @import "utility";

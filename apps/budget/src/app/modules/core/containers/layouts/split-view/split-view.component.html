@@ -1,0 +1,32 @@
+<ion-split-pane when="sm" contentId="main">
+  <ion-menu menu="main-menu" contentId="main" style="max-width: 1%;">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Balance</ion-title>
+      </ion-toolbar>
+    </ion-header> 
+    <ion-content class="ion-padding" >
+      <router-outlet #navigation name="navigation"></router-outlet>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main">
+    <ion-header>
+      <ion-toolbar class="ion-padding-end">
+        <div slot="end">
+          <router-outlet #actions name="actions"></router-outlet>
+        </div>   
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content class="ion-padding">
+      <ion-grid>
+        <ion-row class="">
+            <ion-col size="auto" style="border-right: 1px solid rgba(0,0,0,.1)">
+                  <router-outlet #modulenav name="module-navigation"></router-outlet>
+            </ion-col>
+            <ion-col><router-outlet #outlet="outlet" ></router-outlet></ion-col>
+        </ion-row>
+    </ion-grid> 
+    </ion-content>
+  </div>
+</ion-split-pane>

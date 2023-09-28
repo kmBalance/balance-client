@@ -1,0 +1,10 @@
+
+<div class="text-center">
+  <ion-button  (click)="go(route)" [ngClass]="{'nav-btn': menuType == 'PRIMARY', 'secondary-nav-btn': menuType == 'SECONDARY'}" fill="clear" shape="round" *ngFor="let route of (routes | async); let i = index" >
+    <ng-template *ngIf="true">
+      <ion-icon *ngIf="menuType == 'PRIMARY'" slot="start" [name]="route.icon"> </ion-icon>
+     </ng-template> 
+    {{ route.title }}
+  </ion-button>
+</div>
+

@@ -1,4 +1,4 @@
-<h1>angular workspace full of micro front-ends</h1>
+
 
 # BalanceWorkspace
 
@@ -30,6 +30,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 https://ionicframework.com/docs/angular/your-first-app
 https://ionicframework.com/docs/cli/configuration#multi-app-projects
+https://ionic.io/docs/appflow/quickstart/environment
+https://ionicframework.com/docs/cli/configuration?utm_source=cli&utm_medium=referral&utm_campaign=CLI#multi-app-projects
+https://angular.io/api/core/APP_INITIALIZER
 https://ngrx.io/guide/store/selectors
 https://ngrx.io/guide/store/feature-creators
 https://ngrx.io/guide/store/action-groups
+https://learn.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-angular-auth-code
+https://www.indellient.com/blog/how-to-dockerize-an-angular-application-with-nginx/

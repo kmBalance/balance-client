@@ -1,10 +1,11 @@
 {
+  "defaultProject": "budget",
   "projects": {
     "budget": {
       "name": "budget",
       "integrations": {},
       "type": "angular",
-      "root": "projects/budget"
+      "root": "apps/budget"
     }
   }
 }
