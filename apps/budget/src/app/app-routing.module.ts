@@ -75,7 +75,7 @@ const routes: Routes = [
     canActivate: [
       MsalGuard
     ],
-    component: mobile() ? MobileViewComponent: SplitViewComponent,
+    component: SplitViewComponent,
     children: [
       ...outlets,
       {
