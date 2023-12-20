@@ -8,6 +8,6 @@ export const environment: IEnvironment = {
         tenantId: '',
         redirectUri: ''
     },
-    applications: {},
+    apis: {},
     production: true
 }

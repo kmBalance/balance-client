@@ -1,4 +1,3 @@
-<div [@routeAnimations]="getAnimation()">
-    <h2>{{title$ | async}}</h2>
-    <router-outlet></router-outlet>
+<div [@routerTransition]="" >
+    <router-outlet #container="outlet"></router-outlet>
 </div>

@@ -1,9 +1,10 @@
-type PROJECT_NAME = "BUDGET" | "LOGIN"
 interface IAppConfiguration {
     url: string
 }
-type APPLICATION_MAP = {
-    [K in PROJECT_NAME]?: IAppConfiguration
+
+type APIS = "Balance" | 'File'
+type API_MAP = {
+    [K in APIS]?: IAppConfiguration
 }
 
 export interface IAuth {
@@ -17,5 +18,5 @@ export interface IEnvironment {
     name: ENVIRONMENT,
     production: boolean;
     auth: IAuth;
-    applications: APPLICATION_MAP
+    apis: API_MAP
 }

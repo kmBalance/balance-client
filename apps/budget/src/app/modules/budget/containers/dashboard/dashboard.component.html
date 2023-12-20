@@ -1,4 +1,8 @@
-<!-- <app-timeline></app-timeline>
+<ion-grid>
+    <ion-col size="12" class="ion-justify-content-center">
+        <app-month-selector (currentMonth$)="onMonthChange($event)"></app-month-selector>
+    </ion-col>
+</ion-grid><!-- <app-timeline></app-timeline>
 
 <app-chart [budget]="budget">
 

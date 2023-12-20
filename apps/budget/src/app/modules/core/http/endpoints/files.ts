@@ -4,7 +4,7 @@ type user = {user_id: string, lvl: number }
 
 type PAYCHECK_GET = GET<URI<'paychecks'> & QUERY<GetPaycheckQueryParameters> & RESPONSE<Array<File>>>
 
-type PAYCHECK_UPLOAD = POST<URI<':userId/paychecks'> & DATA<{}> & RESPONSE<{}>>
+type PAYCHECK_UPLOAD = POST<URI<'paychecks'> & DATA<{}> & RESPONSE<{}>>
 
 type PAYCHECK_PATCH = PATCH<URI<':userId/paychecks/:paycheckId'> & PATCHDATA<user> & RESPONSE<{}>>
 

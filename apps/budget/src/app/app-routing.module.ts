@@ -41,7 +41,7 @@ const outlets: Routes = [{
   path: '',
   outlet: 'navigation',
   component: NavigationComponent,
-  resolve: { routes: NavigationResolver }
+  resolve: { routes: NavigationResolver, alignment: () => 'left' }
 },
 {
   path: '',
@@ -49,7 +49,7 @@ const outlets: Routes = [{
   pathMatch: 'full',
   runGuardsAndResolvers: 'always',
   component: NavigationComponent,
-  resolve: { routes: ModuleNavigationResolver, menuType: () => "SECONDARY"}
+  resolve: { routes: ModuleNavigationResolver, menuType: () => "SECONDARY", alignment: () => 'left'}
 }
 ]
 

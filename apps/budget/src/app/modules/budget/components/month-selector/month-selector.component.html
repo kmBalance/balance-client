@@ -1,0 +1,15 @@
+<!-- <div class="scroll-x ion-hide-sm-up">
+    <ion-badge  slot="start"class="scroll-item  ion-margin-horizontal ion-padding-horizontal pill" *ngFor="let month of months; let i = index">
+        {{month }}
+    </ion-badge>
+</div>
+
+<div class="ion-hide-md-down" style="width: inherit;">
+    <ion-badge slot="start"class="pill ion-padding-horizontal ion-margin-horizontal text-md" *ngFor="let month of months; let i = index">
+        {{month }}
+    </ion-badge>
+</div> -->
+
+<ion-button (click)="onSelectMonth(month)" shape="round" [ngClass]="{'activated': month == (currentMonth$.value) }" *ngFor="let month of months; let i = index">
+{{month}}
+</ion-button>

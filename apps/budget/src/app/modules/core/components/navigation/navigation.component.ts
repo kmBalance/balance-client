@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NavigationArray } from '../../types';
 import { ActivatedRoute, ActivationStart, Route, Router } from '@angular/router';
 import { BehaviorSubject, Observable, Subject, filter } from 'rxjs';
@@ -17,15 +17,29 @@ export class NavigationComponent {
   
   menuType: menuType = "PRIMARY";
 
+  alignmentOptions = {
+    'left': 'ion-text-left',
+    'center': 'ion-text-center',
+    'right' : 'ion-text-right'
+  };
+
+  alignment: keyof typeof this.alignmentOptions = 'center';
+  
+  
   ngOnInit() {
-    this.activatedRoute.data.subscribe(({ routes, menuType }) => {
-      this.routes.next(routes);
-      this.menuType = menuType ?? "PRIMARY"
+    this.activatedRoute.data.subscribe(({ routes, menuType, alignment }) => {
+      this.routes.next(routes ?? this.routes.getValue());
+      this.menuType = menuType ?? this.menuType
+      this.alignment = alignment ?? this.alignment
     })
     
   }
 
   go(route: any) {
     this.router.navigate([route.route])
+  }
+
+  getClass() {
+    return ''
   }
 }

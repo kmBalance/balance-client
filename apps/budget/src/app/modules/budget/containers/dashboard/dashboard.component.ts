@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BudgetService } from '../../service/budget.service';
 import { UserBudgetFacade } from '../../state/userBudget.facade';
 import { IBudget } from '../../../core/types';
+import { MONTH } from '../../../core/types/time';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,4 +22,7 @@ export class DashboardComponent {
     })
   }
 
+  onMonthChange(month: MONTH) {
+    console.log(month)
+  }
 }

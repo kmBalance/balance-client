@@ -15,6 +15,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { IonicModule } from '@ionic/angular';
+import { MonthSelectorComponent } from './components/month-selector/month-selector.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { IonicModule } from '@ionic/angular';
     IncomeComponent,
     ExpensesComponent,
     DashboardComponent,
-    TimelineComponent
+    TimelineComponent,
+    MonthSelectorComponent
   ],
   imports: [
     CommonModule,

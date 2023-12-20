@@ -51,7 +51,7 @@ const isIE =
     CoreModule,
     AuthModule,
     StoreDevtoolsModule.instrument(),
-    EffectsModule.forRoot([AuthEffects]),
+    EffectsModule.forRoot(),
     IonicModule.forRoot(),
 
   ],

@@ -20,39 +20,40 @@ export class UploadComponent {
   @Input()
   title: string = "";
 
-  @Output() onSelectedFilesChange = new EventEmitter<IUpload[]>();
-  @Output() onSelectedFilesSubmit = new EventEmitter<IUpload[]>();
+  // @Output() onSelectedFilesChange = new EventEmitter<IUpload[]>();
+  @Output() onSelectedFilesSubmit = new EventEmitter<File[]>();
 
-  selected = new BehaviorSubject<Array<IUpload>>([]);
+  selected$ = new BehaviorSubject<Array<File>>([]);
 
   canSubmit = false;
   constructor(private DomSanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    this.selected.subscribe(data => {
+    this.selected$.subscribe(data => {
       this.canSubmit = data.length > 0;
-      this.onSelectedFilesChange.emit(data);
+      //this.onSelectedFilesChange.emit(data);
     })
   }
 
   onFileSelected(event: Event): void {
     var target = event.target as HTMLInputElement;
-    var value = this.selected.value.concat({ name: File.name, file: target.files![0], url: URL.createObjectURL(target.files![0])})
-    this.selected.next(value);
+    if(!target.files![0]) return;
+
+    var value = this.selected$.value.concat(target.files![0])
+    this.selected$.next(value);
   }
-  onFileRemoved(upload: IUpload): void {   
-    var value = this.selected.value.filter(el => el.url != upload.url) 
-    this.selected.next(value)
+  onFileRemoved(upload: File): void {   
+    var value = this.selected$.value.filter(el => el != upload) ?? []
+    this.selected$.next(value)
   }
 
   onFileDropped(files: File[]): void {
-    var value = files.map(el => ({name: File.name, file: el, url: URL.createObjectURL(el)} as IUpload));
-    this.selected.next(this.selected.value.concat(value))
-
+    this.selected$.next(this.selected$.value.concat(files))
   }
   onSubmit(): void {
-    this.selected.subscribe(data => {
-      this.onSelectedFilesSubmit.emit(data);
-    })
+
+    // this.selected$.subscribe(data => {
+       this.onSelectedFilesSubmit.emit(this.selected$.value);
+    // })
   }
 }

@@ -12,7 +12,7 @@ export class NavigationService {
   constructor(private http: HttpClient) { }
   
   getNavigationRoutes(data: IIdentity): Observable<NavigationArray> {
-    return of([{ 'route': 'budget', 'title': 'Dashboard', 'icon': 'home'}, { 'route': 'user', 'title': 'user', 'icon': 'user'}])
+    return of([{ 'route': 'budget', 'title': 'Dashboard', 'icon': 'home'}, { 'route': 'user', 'title': 'user', 'icon': 'heart'}])
   }
 
 

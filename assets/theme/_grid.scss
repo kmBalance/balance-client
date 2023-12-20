@@ -1,0 +1,10 @@
+.flex-grid {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.flex-row {
+    flex-grow: 1;
+    height: 100%;
+}

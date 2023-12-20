@@ -23,6 +23,7 @@ import { ThemeToggleComponent } from './components/action/theme-toggle/theme-tog
 import { SanitizePipe } from './pipes/sanitize/sanitize.pipe';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MobileViewComponent } from './containers/layouts/mobile-view/mobile-view.component';
+import { HttpProviders } from './http/http.providers';
 
 
 
@@ -53,7 +54,9 @@ import { MobileViewComponent } from './containers/layouts/mobile-view/mobile-vie
     ActionResolver,
     NavigationResolver,
     ThemeService,
-    StyleManagerService]
+    StyleManagerService,
+    ...HttpProviders
+  ]
 
 })
 export class CoreModule { }
